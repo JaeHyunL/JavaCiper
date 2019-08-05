@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RSASign">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="400.0">
+         <children>
+            <TextArea fx:id="SignPublic" layoutX="96.0" layoutY="34.0" prefHeight="77.0" prefWidth="297.0" />
+            <Button layoutX="129.0" layoutY="536.0" mnemonicParsing="false" onAction="#RSAcreatee" prefHeight="40.0" prefWidth="169.0" text="송신자 키생성">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="SignPrivate" layoutX="96.0" layoutY="137.0" prefHeight="77.0" prefWidth="297.0" />
+            <TextArea fx:id="PlainT" layoutX="87.0" layoutY="249.0" prefHeight="77.0" prefWidth="306.0" />
+            <TextArea fx:id="SignCreate" layoutX="87.0" layoutY="356.0" prefHeight="77.0" prefWidth="306.0" />
+            <Button layoutY="394.0" mnemonicParsing="false" onAction="#RSACrea" prefHeight="26.0" prefWidth="74.0" text="서명 생성">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Label layoutX="14.0" layoutY="273.0" prefHeight="29.0" prefWidth="47.0" text="평문" />
+            <Button layoutX="74.0" layoutY="481.0" mnemonicParsing="false" onAction="#RSAcompare" prefHeight="26.0" prefWidth="74.0" text="서명검증">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Label fx:id="Label2" layoutX="246.0" layoutY="474.0" prefHeight="40.0" prefWidth="104.0" text="서명검증" />
+            <Label layoutX="3.0" layoutY="63.0" text="송신자공개키" />
+            <Label layoutY="166.0" prefHeight="19.0" prefWidth="91.0" text="송신자개인키" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

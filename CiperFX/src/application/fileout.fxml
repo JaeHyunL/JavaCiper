@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Fileout">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="400.0">
+         <children>
+            <Button fx:id="btn1" layoutX="285.0" layoutY="30.0" mnemonicParsing="false" onAction="#Button1Action" prefHeight="29.0" prefWidth="109.0" text="암호화할 파일선택">
+               <font>
+                  <Font size="11.0" />
+               </font></Button>
+            <TextField fx:id="TextF" layoutX="14.0" layoutY="30.0" prefHeight="29.0" prefWidth="265.0">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </TextField>
+            <Button layoutX="77.0" layoutY="83.0" mnemonicParsing="false" onAction="#ciperAction" prefHeight="64.0" prefWidth="254.0" text="암복호화파일생성" />
+            <Label fx:id="good" layoutX="57.0" layoutY="199.0" prefHeight="46.0" prefWidth="296.0" text="저장된경로는 : ">
+               <font>
+                  <Font size="11.0" />
+               </font></Label>
+            <Label fx:id="MadeBy이재현" layoutX="38.0" layoutY="281.0" prefHeight="79.0" prefWidth="323.0" text="AES 키를 사용하며 키길이는 128비트" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

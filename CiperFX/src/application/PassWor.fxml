@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PassWor">
+   <children>
+      <AnchorPane layoutX="7.0" prefHeight="600.0" prefWidth="400.0">
+         <children>
+            <TextArea fx:id="salt" layoutX="77.0" layoutY="108.0" prefHeight="60.0" prefWidth="307.0" />
+            <Text layoutX="14.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="난수솔트" />
+            <TextArea fx:id="count" layoutX="281.0" layoutY="453.0" prefHeight="38.0" prefWidth="103.0" />
+            <TextArea fx:id="ciper" accessibleRole="TEXT" layoutX="74.0" layoutY="307.0" prefHeight="114.0" prefWidth="307.0" />
+            <Text layoutX="211.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="반복횟수" />
+            <TextArea fx:id="pass" layoutX="74.0" layoutY="204.0" prefHeight="60.0" prefWidth="307.0" />
+            <Text layoutX="14.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="패스워드" />
+            <Text layoutX="14.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="암호문" />
+            <TextArea fx:id="aaad" layoutX="77.0" layoutY="14.0" prefHeight="70.0" prefWidth="300.0" />
+            <Button layoutX="227.0" layoutY="525.0" mnemonicParsing="false" onAction="#ciper" prefHeight="46.0" prefWidth="103.0" text="암호화" />
+            <Button layoutX="59.0" layoutY="525.0" mnemonicParsing="false" onAction="#Randnum" prefHeight="46.0" prefWidth="116.0" text="난수솔트생성" />
+            <Text layoutX="29.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="평문" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

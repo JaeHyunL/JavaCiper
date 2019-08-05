@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="-7.0" prefHeight="800.0" prefWidth="400.0">
+         <children>
+            <TextArea fx:id="Tex1" layoutX="147.0" layoutY="14.0" prefHeight="0.0" prefWidth="228.0" />
+            <TextArea layoutX="147.0" layoutY="68.0" prefHeight="0.0" prefWidth="228.0" />
+            <TextArea layoutX="147.0" layoutY="128.0" prefHeight="0.0" prefWidth="228.0" />
+            <TextArea layoutX="147.0" layoutY="185.0" prefHeight="0.0" prefWidth="228.0" />
+            <TextArea layoutX="147.0" layoutY="242.0" prefHeight="44.0" prefWidth="228.0" />
+            <TextArea layoutX="147.0" layoutY="300.0" prefHeight="44.0" prefWidth="228.0" />
+            <TextArea layoutX="147.0" layoutY="363.0" prefHeight="44.0" prefWidth="228.0" />
+            <Label layoutX="34.0" layoutY="14.0" prefHeight="45.0" prefWidth="86.0" text="이름" />
+            <Label layoutX="34.0" layoutY="69.0" prefHeight="45.0" prefWidth="86.0" text="일련번호" />
+            <Label layoutX="34.0" layoutY="135.0" prefHeight="45.0" prefWidth="86.0" text="국가" />
+            <Label layoutX="39.0" layoutY="192.0" prefHeight="45.0" prefWidth="86.0" text="도" />
+            <Label layoutX="34.0" layoutY="243.0" prefHeight="45.0" prefWidth="86.0" text="시" />
+            <Label layoutX="34.0" layoutY="301.0" prefHeight="45.0" prefWidth="86.0" text="기관 " />
+            <Label layoutX="39.0" layoutY="364.0" prefHeight="45.0" prefWidth="86.0" text="부서" />
+            <TextArea layoutX="16.0" layoutY="484.0" prefHeight="255.0" prefWidth="365.0" text="구현하지못햇습니다. &#10;" />
+            <Label layoutX="34.0" layoutY="439.0" prefHeight="45.0" prefWidth="86.0" text="인증서." />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

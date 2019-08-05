@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SymCiper">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="400.0">
+         <children>
+            <ChoiceBox fx:id="modChoice" layoutX="65.0" layoutY="15.0" prefHeight="37.0" prefWidth="117.0" />
+            <ChoiceBox fx:id="AlgoChoiceBox" layoutX="281.0" layoutY="15.0" prefHeight="37.0" prefWidth="117.0" />
+            <Text layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="운영모드" />
+            <Text layoutX="188.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="알고리즘선택" />
+            <TextArea fx:id="KeyText" layoutX="90.0" layoutY="62.0" prefHeight="64.0" prefWidth="305.0" />
+            <Button layoutX="7.0" layoutY="80.0" mnemonicParsing="false" onAction="#Randnum" text="키생성" />
+            <TextArea fx:id="VText" layoutX="90.0" layoutY="132.0" prefHeight="64.0" prefWidth="305.0" />
+            <TextArea fx:id="PlainT" layoutX="90.0" layoutY="214.0" prefHeight="94.0" prefWidth="305.0" />
+            <Text layoutX="20.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="평문" />
+            <TextArea fx:id="CiperT" layoutX="90.0" layoutY="330.0" prefHeight="94.0" prefWidth="305.0" />
+            <Button layoutX="8.0" layoutY="477.0" mnemonicParsing="false" onAction="#decryptAction" text="복호화" />
+            <Button layoutX="5.0" layoutY="363.0" mnemonicParsing="false" onAction="#ciperAction" text="암호화" />
+            <TextArea fx:id="DecT" layoutX="90.0" layoutY="459.0" prefHeight="94.0" prefWidth="305.0" />
+            <Button layoutX="2.0" layoutY="150.0" mnemonicParsing="false" onAction="#IVAction" prefHeight="46.0" prefWidth="83.0" text="백터생성" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

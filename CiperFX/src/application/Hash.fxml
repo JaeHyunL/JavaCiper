@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Hash">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="400.0">
+         <children>
+            <TextField fx:id="hashTextFiled" layoutX="86.0" layoutY="90.0" prefHeight="87.0" prefWidth="229.0" text="평문을입력하세요 . " />
+            <TextArea fx:id="hashTextArea" layoutX="86.0" layoutY="209.0" prefHeight="119.0" prefWidth="229.0" />
+            <Button fx:id="작성자이재현" layoutX="86.0" layoutY="407.0" mnemonicParsing="false" onAction="#ciper" prefHeight="64.0" prefWidth="95.0" text="암호화" />
+            <Button fx:id="작성자이재현" layoutX="231.0" layoutY="407.0" mnemonicParsing="false" onAction="#Randnum" prefHeight="64.0" prefWidth="95.0" text="난수생성" />
+            <ChoiceBox fx:id="choiceBox" layoutX="176.0" layoutY="360.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

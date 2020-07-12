@@ -12,15 +12,20 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+/* 
+ * @param hash 해쉬 값 을 입력변수로 받음
+ * @param hashItem 암호화 알고리즘 종류  리스트  
+ * @return 16진수로 데이터 값을 반환함 
+ */
 public class Hash {
 	private static String bytesToHex(byte[] hash) {
 		StringBuilder sb = new StringBuilder();
 		for(byte b : hash) {
-			sb.append(String.format("%02x", b)); // b에 데이터값을 16진수 형으로 표기함  
+			sb.append(String.format("%02x", b));  
 		}
 		return sb.toString();
-
 	}
+	
 	
 	ObservableList<String> hashItem = 
 			FXCollections.observableArrayList("MD5", "SHA-1", "SHA-224", "SHA-256", "SHA-384", "SHA-512");
@@ -40,16 +45,22 @@ public class Hash {
 		choiceBox.setItems(hashItem);
 
 	}
-	
+	/*
+	 * @return 난수 값 생성
+	 */
 	public void Randnum(ActionEvent Evnet) throws NoSuchAlgorithmException {
 		SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
 		byte[] readByte = new byte[16];
 		sr.nextBytes(readByte);
 		hashTextFiled.setText(bytesToHex(readByte));
-		
-		System.out.println(bytesToHex(readByte));
 	}
 	
+	/*
+	 * input 평문 
+	 * @return 암호문 
+	 * @param md 인스턴스를 가지고있음 
+	 * @param hash 암호화 된 내용을 가지고 있음 
+	 */
 	public void ciper(ActionEvent Event) throws NoSuchAlgorithmException {
 		if(getChoice(hashItem).equals("SHA-1"))
 		{
@@ -57,7 +68,6 @@ public class Hash {
 		md.update(hashTextFiled.getText().getBytes());
 		byte[] hash = md.digest();
 		hashTextArea.setText(bytesToHex(hash));
-	//	System.out.println("성공");
 		
 		}
 		if(getChoice(hashItem).equals("SHA-256")) {
@@ -65,7 +75,6 @@ public class Hash {
 			md.update(hashTextFiled.getText().getBytes());
 			byte[] hash = md.digest();
 			hashTextArea.setText(bytesToHex(hash));
-		//	System.out.println("성공");
 			
 		}
 		if(getChoice(hashItem).equals("SHA-512")) {
@@ -73,17 +82,13 @@ public class Hash {
 			md.update(hashTextFiled.getText().getBytes());
 			byte[] hash = md.digest();
 			hashTextArea.setText(bytesToHex(hash));
-		//	System.out.println("성공");
-			
 		}
 
 		if(getChoice(hashItem).equals("MD5")) {
 			MessageDigest md = MessageDigest.getInstance("MD5");
 			md.update(hashTextFiled.getText().getBytes());
 			byte[] hash = md.digest();
-			hashTextArea.setText(bytesToHex(hash));
-		//	System.out.println("성공");
-			
+			hashTextArea.setText(bytesToHex(hash));	
 		}
 
 		if(getChoice(hashItem).equals("SHA-384")) {
@@ -91,27 +96,22 @@ public class Hash {
 			md.update(hashTextFiled.getText().getBytes());
 			byte[] hash = md.digest();
 			hashTextArea.setText(bytesToHex(hash));
-		//	System.out.println("성공");
-			
-		}	if(getChoice(hashItem).equals("SHA-224")) {
+		}	
+		
+		if(getChoice(hashItem).equals("SHA-224")) {
 			MessageDigest md = MessageDigest.getInstance("SHA-224");
 			md.update(hashTextFiled.getText().getBytes());
 			byte[] hash = md.digest();
 			hashTextArea.setText(bytesToHex(hash));
-		//	System.out.println("성공");
 			
 		}
-		
-
-		//	else
-			
-		//System.out.println("실패");
 	
 	}
-	
+	/* 
+	 * @return gui에서 선택한 해당 알고리즘 
+	 */
 	public String getChoice(ObservableList<String> hashItem) {
 		String ciper = choiceBox.getValue();
-	//	System.out.println(ciper);
 		return ciper;
 	}
 }

@@ -56,7 +56,11 @@ public class hMac {
 		
 	}
 	
-	
+	/*
+	 * hmac 함수 값 계산 
+	 * @param 입력값 String 
+	 * @return hmac값 계산 
+	 */
 	public void ciper(ActionEvent Event) throws Exception {
 	
 		if(getChoice(macItem).equals("HmacSHA1")) {
@@ -128,10 +132,11 @@ public class hMac {
 		}
 	
 	}
-	
+	/*
+	 * Item 선택 함수
+	 */
 	public String getChoice(ObservableList<String> hashItem) {
 		String ciper = choiceBox.getValue();
-	//	System.out.println(ciper);
 		return ciper;
 	}
 	
